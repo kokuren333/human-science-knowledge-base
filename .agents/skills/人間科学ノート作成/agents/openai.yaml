@@ -1,0 +1,6 @@
+interface:
+  display_name: "人間科学ノート作成"
+  short_description: "content/をvault rootとして、信頼できるソースに基づく日本語の完成記事を高速に1本作る"
+  default_prompt: "信頼できるソースを参照し、content/配下に、既存内部リンク・タグ・MOC候補・番号付き本文引用・参考文献・未解決問題を含む日本語記事を1本作成してください。画像生成は明示的に依頼された場合だけ行い、未作成内部リンクは作らないでください。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local/editor state
+.env
+.env.*
+.vscode/
+.idea/
+**/.obsidian/
+.DS_Store
+Thumbs.db
+
+# Generated runtime artifacts
+logs/
+test-work-runtime/
+tmp_image_contact/
+
+# Local build/output directories
+public/
+dist/
+node_modules/
