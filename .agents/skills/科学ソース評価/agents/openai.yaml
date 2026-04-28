@@ -1,6 +1,6 @@
 interface:
   display_name: "科学ソース評価"
   short_description: "1本の記事に必要な科学・臨床ソースを効率よく評価し、根拠表、引用番号、記事ブリーフを作る"
-  default_prompt: "1本の記事作成に使う科学的ソースを効率よく評価し、source brief、claim-evidence table、article brief、番号付き参考文献リストを作成してください。画像生成や画像用briefは、明示的に依頼された場合だけ扱ってください。"
+  default_prompt: "1本の記事作成に使う科学的ソースを効率よく評価し、source brief、claim-evidence table、article brief、番号付き参考文献リストを作成してください。SVG、Mermaid/mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図や図用briefは禁止です。画像生成や画像用briefは、明示的に依頼された場合だけimagegen/image_genのラスター画像として扱ってください。"
 policy:
   allow_implicit_invocation: true

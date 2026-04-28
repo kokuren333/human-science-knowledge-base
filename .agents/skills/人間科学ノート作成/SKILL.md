@@ -1,6 +1,6 @@
 ---
 name: human-science-note-writer
-description: Write one Japanese Obsidian/Quartz finished long-form article per user instruction for human science topics, especially neuroscience, cognition, psychiatry, psychology, machine learning, mathematical models, and computational psychiatry. Use when the user asks for a readable source-grounded article, explanation, literature-based summary, question-driven article, or Obsidian-ready Markdown article under content/ as the vault root, with existing internal links, tags, MOC placement suggestions, numbered in-text citations, references with URLs, and LaTeX when needed. Do not generate or add images, Mermaid diagrams, or other figures unless the user explicitly asks for them; when images are used, store them under content/asset/.
+description: Write one Japanese Obsidian/Quartz finished long-form article per user instruction for human science topics, especially neuroscience, cognition, psychiatry, psychology, machine learning, mathematical models, and computational psychiatry. Use when the user asks for a readable source-grounded article, explanation, literature-based summary, question-driven article, or Obsidian-ready Markdown article under content/ as the vault root, with existing internal links, tags, MOC placement suggestions, numbered in-text citations, references with URLs, and LaTeX when needed. Do not create SVG, Mermaid/mermaid.js, HTML/CSS/canvas, ASCII-art, or code-generated diagrams. If a figure is explicitly requested, use only imagegen/image_gen raster image generation and store images under content/asset/.
 ---
 
 # human-science-note-writer
@@ -9,11 +9,11 @@ description: Write one Japanese Obsidian/Quartz finished long-form article per u
 
 - 日本語で、Obsidian / Quartz にそのまま置ける完成記事を1本作る。
 - ソース参照は必須。信頼できる文献・公的資料・ガイドライン・レビュー・主要原著論文に基づいて書く。
-- 画像生成は通常行わない。ユーザーが明示的に「画像を作って」「imagegenで図を生成して」などと指示した場合だけ `imagegen` / `image_gen` を使う。
+- 画像生成は通常行わない。ユーザーが明示的に「画像を作って」「imagegenで図を生成して」などと指示した場合だけ `imagegen` / `image_gen` によるラスター画像生成を使う。
 - 画像の追加・挿入も通常行わない。画像が必要な場合はユーザー側から明示指示があるものとして扱い、こちらから自発的に画像を入れない。
 - 画像を使う場合は `content/asset/` 配下で管理する。記事別に分ける必要がある場合は `content/asset/{{記事スラッグ}}/` を作り、Markdown からは Quartz で解決しやすい相対パスで参照する。
-- Mermaid、図説、図解、画像などの図は通常入れない。ユーザーが明示的に「図を入れて」「Mermaidで」「図解して」などと依頼した場合だけ使う。
-- 図解が有用な場合でも、明示指示がなければ Markdown の表、箇条書き、短い段落、または「図解案」として文章で提示する。
+- SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図・図解・概念図・フローチャート・模式図の作成は禁止する。
+- 図解が有用な場合でも、`imagegen` / `image_gen` の明示指示がなければ Markdown の表、箇条書き、短い段落、または「図解案」として文章で提示する。
 - 医療・精神医学の内容は教育・研究目的として書き、個別診断・治療指示として断定しない。
 
 ## 高速ワークフロー

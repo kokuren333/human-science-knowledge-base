@@ -1,6 +1,6 @@
 ---
 name: quartz-publish-preflight
-description: Check Obsidian Markdown articles under content/ for Quartz publication readiness, including frontmatter, wikilinks, aliases, tags, descriptions, file paths, attachments when present, numbered in-text citations, references with URLs, one-article scope, and readability. Use before publishing a content/ vault or article with Quartz. Do not require or add images unless the article or user explicitly requires them; when images are used, require them under content/asset/.
+description: Check Obsidian Markdown articles under content/ for Quartz publication readiness, including frontmatter, wikilinks, aliases, tags, descriptions, file paths, attachments when present, numbered in-text citations, references with URLs, one-article scope, and readability. Use before publishing a content/ vault or article with Quartz. Do not require or add images unless the article or user explicitly requires imagegen/image_gen raster images; when images are used, require them under content/asset/. Flag SVG, Mermaid/mermaid.js, HTML/CSS/canvas, ASCII-art, and code-generated diagrams as violations.
 ---
 
 # quartz-publish-preflight
@@ -9,7 +9,7 @@ description: Check Obsidian Markdown articles under content/ for Quartz publicat
 
 Obsidian / Quartz 向け記事を公開前に点検する。公開可能性、frontmatter、内部リンク、参考文献、本文品質、医療安全表現を確認し、修正すべき点を blocking issues / warnings / suggested fixes に分ける。
 
-画像は必須条件にしない。こちらから画像追加を要求しない。記事内に画像がある場合だけ、alt text、キャプション、配置、Quartzで解決できるパスを確認する。
+画像は必須条件にしない。こちらから画像追加を要求しない。記事内に画像がある場合だけ、alt text、キャプション、配置、Quartzで解決できるパスを確認する。SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図・図解・概念図・フローチャート・模式図が含まれる場合は blocking issue とする。
 
 ## チェック項目
 
@@ -27,6 +27,7 @@ Obsidian / Quartz 向け記事を公開前に点検する。公開可能性、fr
 - 1つの記事内で複数テーマを無理に統合していないか。
 - 長文記事では目次に耐える見出し構成か。
 - 保存先が `content/` 配下で、`vault/` を作っていないか。
+- SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図が含まれていないか。含まれている場合は blocking issue として報告する。
 - 医療・精神医学ノートで個別診断や治療指示として読める断定がないか。
 - 初学者から中上級者まで読める導入、用語説明、深掘りがあるか。
 

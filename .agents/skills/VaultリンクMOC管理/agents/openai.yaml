@@ -1,6 +1,6 @@
 interface:
   display_name: "VaultリンクMOC管理"
   short_description: "content/をvault rootとして、記事配置、既存内部リンク、MOC、タグ、添付ファイル管理を整理する"
-  default_prompt: "content/をvault rootとして、記事の配置先、既存関連ノート候補、MOC更新候補、タグ、添付ファイルの保存場所を確認し、vault/や未作成内部リンクや指示されていない記事ファイルを作らずに整理してください。画像生成は明示的に依頼された場合だけ行ってください。"
+  default_prompt: "content/をvault rootとして、記事の配置先、既存関連ノート候補、MOC更新候補、タグ、添付ファイルの保存場所を確認し、vault/や未作成内部リンクや指示されていない記事ファイルを作らずに整理してください。SVG、Mermaid/mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図作成は禁止です。画像生成は明示的に依頼された場合だけimagegen/image_genのラスター画像で行ってください。"
 policy:
   allow_implicit_invocation: true

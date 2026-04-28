@@ -1,6 +1,6 @@
 ---
 name: scientific-source-curator
-description: Evaluate, rank, and summarize scientific and clinical sources for one Obsidian article at a time. Use when the user asks for reliable sources, citations, literature review, evidence grading, psychiatric or neuroscience references, source-first article creation, efficient source discovery, numbered in-text citation planning, or references that must include URLs/DOIs. Do not generate images unless the user explicitly asks for image generation.
+description: Evaluate, rank, and summarize scientific and clinical sources for one Obsidian article at a time. Use when the user asks for reliable sources, citations, literature review, evidence grading, psychiatric or neuroscience references, source-first article creation, efficient source discovery, numbered in-text citation planning, or references that must include URLs/DOIs. Do not create SVG, Mermaid/mermaid.js, HTML/CSS/canvas, ASCII-art, or code-generated diagrams. If a figure is explicitly requested, prepare only an imagegen/image_gen raster image brief.
 ---
 
 # scientific-source-curator
@@ -9,7 +9,7 @@ description: Evaluate, rank, and summarize scientific and clinical sources for o
 
 記事作成の前工程として、信頼できるソースを高速に選び、主要主張と根拠の対応を整理する。最終出力は、記事本文に渡せる `Source brief`、`Claim-evidence table`、`Article brief`、番号付き参考文献にする。
 
-画像生成は通常行わない。ユーザーが明示的に画像生成を依頼した場合だけ、画像生成用の brief を作る。
+画像生成は通常行わない。ユーザーが明示的に画像生成を依頼した場合だけ、`imagegen` / `image_gen` 用のラスター画像 brief を作る。SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図・図解・概念図・フローチャート・模式図の brief は作らない。
 
 ## 高速ソース探索
 

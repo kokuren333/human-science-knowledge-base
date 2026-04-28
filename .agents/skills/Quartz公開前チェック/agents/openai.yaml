@@ -1,6 +1,6 @@
 interface:
   display_name: "Quartz公開前チェック"
   short_description: "content/配下の完成記事について、frontmatter、既存リンク、番号付き引用、参考文献、医療安全表現を点検する"
-  default_prompt: "content/配下の完成記事をQuartz公開前チェックし、未作成内部リンク、下書き/公開フラグ、vault/参照、本文中引用番号、参考文献URL、blocking issues、warnings、suggested fixes、publish readinessを報告してください。画像は記事内に存在する場合だけ確認してください。"
+  default_prompt: "content/配下の完成記事をQuartz公開前チェックし、未作成内部リンク、下書き/公開フラグ、vault/参照、本文中引用番号、参考文献URL、blocking issues、warnings、suggested fixes、publish readinessを報告してください。画像は記事内に存在する場合だけ確認してください。SVG、Mermaid/mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図はblocking issueとして報告してください。"
 policy:
   allow_implicit_invocation: true

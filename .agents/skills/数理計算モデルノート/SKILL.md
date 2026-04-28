@@ -1,6 +1,6 @@
 ---
 name: computational-math-model-note
-description: Create one Japanese Obsidian/Quartz finished article per user instruction for mathematical models, machine learning, Bayesian inference, reinforcement learning, neural networks, predictive processing, active inference, dynamical systems, psychometrics, and computational psychiatry under content/ as the vault root. Use when LaTeX equations, model assumptions, algorithms, pseudocode, model-to-clinical interpretation, numbered in-text citations, and references with URLs are needed. Do not generate or add images, Mermaid diagrams, or other figures unless the user explicitly asks for them; when images are used, store them under content/asset/.
+description: Create one Japanese Obsidian/Quartz finished article per user instruction for mathematical models, machine learning, Bayesian inference, reinforcement learning, neural networks, predictive processing, active inference, dynamical systems, psychometrics, and computational psychiatry under content/ as the vault root. Use when LaTeX equations, model assumptions, algorithms, pseudocode, model-to-clinical interpretation, numbered in-text citations, and references with URLs are needed. Do not create SVG, Mermaid/mermaid.js, HTML/CSS/canvas, ASCII-art, or code-generated diagrams. If a figure is explicitly requested, use only imagegen/image_gen raster image generation and store images under content/asset/.
 ---
 
 # computational-math-model-note
@@ -9,11 +9,11 @@ description: Create one Japanese Obsidian/Quartz finished article per user instr
 
 - 数理モデル・機械学習・計算論的精神医学の記事を、日本語の完成ノートとして1本作る。
 - ソース参照は必須。原著論文、方法論論文、主要レビュー、公式ドキュメントを優先する。
-- 画像生成は通常行わない。ユーザーが明示的に依頼した場合だけ `imagegen` / `image_gen` を使う。
+- 画像生成は通常行わない。ユーザーが明示的に依頼した場合だけ `imagegen` / `image_gen` によるラスター画像生成を使う。
 - 画像の追加・挿入も通常行わない。画像が必要な場合はユーザー側から明示指示があるものとして扱い、こちらから自発的に画像を入れない。
 - 画像を使う場合は `content/asset/` 配下で管理する。記事別に分ける必要がある場合は `content/asset/{{記事スラッグ}}/` を作り、Markdown からは Quartz で解決しやすい相対パスで参照する。
-- Mermaid、図説、図解、画像などの図は通常入れない。ユーザーが明示的に「図を入れて」「Mermaidで」「図解して」などと依頼した場合だけ使う。
-- 図が必要に見える場合でも、明示指示がなければ表、擬似コード、数式、箇条書き、短い段落、または文章による図解案で済ませる。
+- SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図・図解・概念図・フローチャート・模式図の作成は禁止する。
+- 図が必要に見える場合でも、`imagegen` / `image_gen` の明示指示がなければ表、擬似コード、数式、箇条書き、短い段落、または文章による図解案で済ませる。
 - 臨床解釈は教育・研究目的に限定し、個別診断や治療指示として書かない。
 
 ## 高速ワークフロー

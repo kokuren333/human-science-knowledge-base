@@ -17,6 +17,10 @@
 - Quartz 公開を意識し、frontmatter を整える。
 - 長文ノートでは `description`, `tags`, `aliases`, `draft`, `publish`, `created`, `updated`, `enableToc` を原則として含める。
 - 数式は Markdown / Quartz で読める LaTeX を使う。
+- 図・図解・概念図・フローチャート・模式図を作る場合、SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図作成は禁止する。
+- 図像表現が必要な場合は、ユーザーが明示的に依頼したときだけ `$imagegen` / `image_gen` によるラスター画像生成を使う。
+- `$imagegen` で生成した画像は `content/asset/` 配下に保存し、Markdown から Quartz で解決しやすい相対パスで参照する。
+- 図が有用でも `$imagegen` の明示依頼がない場合は、Markdown の表、箇条書き、数式、擬似コード、短い段落、または文章による「図解案」に留める。
 
 ## 完了条件
 

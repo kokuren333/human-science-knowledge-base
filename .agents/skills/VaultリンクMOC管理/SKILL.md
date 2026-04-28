@@ -1,6 +1,6 @@
 ---
 name: vault-linker-moc-builder
-description: Scan content/ as the Obsidian/Quartz vault root, suggest related existing notes, create or update MOC pages, assign numbered Japanese directories and tags, place attachments when present, and add safe internal links only to confirmed existing notes or explicitly requested new notes. Use when the user asks to organize a vault, connect notes, create MOCs, update directories, add backlinks, or prepare Obsidian articles for Quartz without creating a vault/ directory. Do not generate or add images unless the user explicitly asks for them; when images are used, store them under content/asset/.
+description: Scan content/ as the Obsidian/Quartz vault root, suggest related existing notes, create or update MOC pages, assign numbered Japanese directories and tags, place attachments when present, and add safe internal links only to confirmed existing notes or explicitly requested new notes. Use when the user asks to organize a vault, connect notes, create MOCs, update directories, add backlinks, or prepare Obsidian articles for Quartz without creating a vault/ directory. Do not create SVG, Mermaid/mermaid.js, HTML/CSS/canvas, ASCII-art, or code-generated diagrams. If a figure is explicitly requested, use only imagegen/image_gen raster image generation and store images under content/asset/.
 ---
 
 # vault-linker-moc-builder
@@ -9,9 +9,11 @@ description: Scan content/ as the Obsidian/Quartz vault root, suggest related ex
 
 Obsidian / Quartz の `content/` 配下で、記事の配置、関連既存ノート、MOC、タグ、添付ファイルの置き場所を整理する。記事作成後の受け入れ工程として使う。
 
-画像生成や画像追加は通常行わない。既存の添付画像がある場合だけ配置とリンクを確認する。ユーザーが明示的に画像生成・画像追加を依頼した場合だけ `imagegen` / `image_gen` や画像配置を行う。
+画像生成や画像追加は通常行わない。既存の添付画像がある場合だけ配置とリンクを確認する。ユーザーが明示的に画像生成・画像追加を依頼した場合だけ `imagegen` / `image_gen` によるラスター画像生成や画像配置を行う。
 
 画像を扱う場合は `content/asset/` 配下で管理する。記事別に分ける必要がある場合は `content/asset/{{記事スラッグ}}/` を使い、記事からは Quartz で解決しやすい相対パスで参照する。
+
+SVG、Mermaid / mermaid.js、HTML/CSS/canvas、ASCII art、その他のコード生成による図・図解・概念図・フローチャート・模式図の作成は禁止する。
 
 ## vault root
 
